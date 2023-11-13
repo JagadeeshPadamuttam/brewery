@@ -79,7 +79,9 @@ ReviewModel.create(req.body)
 })
 
 app.get("/",function(req,res){
-  res.send("hello world this is freaking!")
+  app.setHeader("Access-Control-Allow-Credentials","true")
+  res.send("api is running");
+  res.send("hello world this is freaking!");
 });
 
 app.listen(port, () => {
